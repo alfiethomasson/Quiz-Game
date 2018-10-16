@@ -5,11 +5,14 @@ using UnityEngine;
 
 public class SkeletonCollision : MonoBehaviour {
 
+    float delay = 10.0f;
+    public Rigidbody rb;
     Animator animator;
     
     void Awake()
     {
         animator = gameObject.GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
 
 
@@ -20,6 +23,19 @@ public class SkeletonCollision : MonoBehaviour {
         {
         
             animator.SetBool("hit", true);
+            rb.isKinematic = true;
+            rb.detectCollisions = false;
+            Destroy(gameObject, delay);
         }
     }
+
+    /*void DisableRagdoll()
+    {
+
+        rb.isKinematic = true;
+        rb.detectCollisions = false;
+
+    }
+    */
+   
 }

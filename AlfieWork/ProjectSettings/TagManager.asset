@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sword
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -42,6 +44,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Sword
+  - name: Enemy
     uniqueID: 2868391949
     locked: 0
